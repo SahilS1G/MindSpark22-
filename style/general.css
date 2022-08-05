@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+
+:root{
+    --clr-neutral-900: hsl(207, 19%, 9%);
+    --clr-neutral-100: hsl(0, 0, 100%);
+    --clr-neutral-400: hsl(142, 90%, 61%);
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    /* display: grid;
+    place-items: center; */
+    min-height: 100vh;
+    justify-content: center;
+    line-height: 1.6;
+    background-color: var(--clr-neutral-900);
+    font-family: sans-serif;
+    color: white;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    
+} 
+
+.canvas{
+    position: fixed;
+    z-index: -1;
+
+    
+}
+
+.heading{
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.allbody{
+    display: grid;
+    grid-template-columns: 1fr 450px;
+
+}
+
+.card-list{
+    display: grid;
+    grid-template-columns: 400px 400px;
+    row-gap: 50px;
+    column-gap: 40px;
+    padding-left: 10px;
+}
+
+.card{
+    color: var(--clr-neutral-100);
+    background-image: url("../msEvents/Voltus.png");
+    /* height: 70px;
+    width: 30px; */
+    background-size: cover;
+    padding: 9rem 0 0;
+    max-width: 40ch;
+    /* background-color: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%); */
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: rgb(244, 107, 69);
+    box-shadow:4px 4px 20px rgb(244, 107, 69);
+
+    transition: transform 500ms ease
+}
+
+.card-list .c2{
+    background-image: url("../msEvents/Structura.png");
+    background-color: rgb(248, 7, 89);
+    box-shadow:4px 4px 20px rgb(248, 7, 89);
+
+}
+
+.card-list .c3{
+    background-image: url(../msEvents/Amuzia.png);
+   background-color: rgb(168, 224, 99);
+   box-shadow:4px 4px 20px rgb(168, 224, 99);
+
+}
+
+.card-list .c4{
+    background-image: url(../msEvents/Codifica.png);
+    background-color: rgb(127, 0, 255);
+    box-shadow:4px 4px 20px rgb(127, 0, 255);
+
+}
+
+.card-list .c5{
+    background-image: url(../msEvents/Dynamus.png);
+    background-color: rgb(150, 222, 218);
+    box-shadow:4px 4px 20px rgb(150, 222, 218);
+
+}
+
+.card-list .c6{
+    background-image: url(../msEvents/Illuminati.png);
+    background-color: rgb(238, 9, 121);
+    box-shadow:4px 4px 20px rgb(238, 9, 121);
+
+}
+
+.card:hover{
+    transform: scale(1.05)
+}
+
+.card-content{
+    --padding: 1.5rem;
+    padding: var(--padding);
+    background-image: linear-gradient(
+        hsl(0 0% 0% / 0),
+        hsl(20 0% 0% / 0.2) 20%,
+        hsl(0 0% 0% / 1)
+
+    );
+
+    transform:translateY(66%);
+    transition: transform 500ms ease;
+    
+}
+
+.card:hover .card-content{
+    transform: translateY(0);
+    transition-delay: 500ms;
+}
+
+.card-content > *:not(.card-title){
+    opacity: 0;
+    transition: transform 200ms ease;
+
+}
+
+
+.card:hover .card-content > *{
+    opacity: 1;
+}
+
+.card-title {
+    position: relative;
+    width: max-content;
+    font-size: 30px;
+}
+
+.card-body{
+    color: rgb(255 255 255 / 0.8);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* font-size: 20px; */
+}
+
+.card-title::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    
+    left: calc(var(--padding) * -1);
+    bottom: -2px;
+    width: calc(100% + var(--padding));
+    background: var(--clr-neutral-400);
+
+    transform: scaleX(0);
+    transition : transform 500ms ease;
+    transform-origin: left;
+}
+
+.card:hover .card-title::after {
+    transform: scaleX(1)
+}
+
+.card-button{
+    cursor:pointer;
+    display: inline-block;
+    text-decoration: none;
+    color:var(--clr-neutral-900);
+    background-color: var(--clr-neutral-400);
+    padding: 0.25em 1.0em;
+    border-radius: 0.25em;
+}
+
+.card-button:hover,
+.card-button:focus{
+    background-color: green;
+}
+
+.mindspark-imgs{
+    display: flex;
+    flex-direction: column;
+    padding-top: 123px;
+    
+}
+
+.imgms2{
+    height: 330px;
+    border-radius: 700px;
+}
+
+.ms-img2{
+    padding-top: 200px;
+    
+}
+
+.spark{
+    color: rgb(249, 0, 77);
+}
+
+.h20{
+    margin-left: 20px;
+}
+
+.h22{
+    color: rgb(249, 0, 77);
+}
+
+footer{
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+.main-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-bottom: 60px;
+} 
+
+
+
+.main-buttons .buttons{
+    
+    height: 60px;
+    width: 60px;
+    float: left;
+    margin: 0 5px;
+    background-image: linear-gradient(45deg,#28313B,#485461);
+    color: white;
+    border-radius: 50px;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    cursor:pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: 0px 10px 10px rgba(225, 225, 225, 0.1);
+    transition: all 0.3s ease-out;
+    overflow: hidden;
+}
+
+.main-buttons .buttons:hover{
+    width: 200px;
+    color: white;
+}
+
+.main-buttons .buttons .icon{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    padding-right: 10px;
+    position: relative;
+    left: 4px;
+    border-width: 0;
+    color: white;
+}
+
+@media (max-width:1183px){
+    .mindspark-imgs{
+        display: none;
+    }
+}
+
+@media (max-width:823px) {
+    .card-list{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .card{
+        padding: 1rem 0 0;
+        max-width:6000ch;
+        background-size:contain;
+        background-repeat: no-repeat;
+    }
+    .canvas{
+        /* height: 1300vh; */
+        width: 100vw;
+
+    }
+
+}
